@@ -1,0 +1,66 @@
+.checkout-container {
+    height: calc(100vh - 100px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+  }
+  label{
+    display: block;
+  }
+  
+  form{
+    align-self: flex-start;
+    background-color: rgba(0, 0, 0, 0.454);
+    border-radius: 10px;
+    /* height: 100%; */
+    height: max-content;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 40px;
+  }
+  
+  input[type="email"],
+  input[type="text"],
+  input[type="submit"]{
+    margin: 10px 0px;
+    padding: 10px;
+    
+  }
+  .priceDispaly{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.454);
+    border-radius: 10px;
+    height: max-content;
+    padding: 30px;
+    align-self: flex-start;
+    margin-top: 40px;
+  }
+
+
+  #modal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.779);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 150px 150px 250px 150px;
+    font-size: 26px;
+  }
+  #modal a {
+    margin: 20px auto;
+  }
+  
