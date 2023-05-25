@@ -6,58 +6,16 @@ import "./bookTicket.css";
 const BookTicket = () => {
   const { id } = useParams();
   const[currentlyBooked, setCurrentlyBooked] = useState([]);
-  const [seats, setSeats] = useState([
-    {
-      seatNo: 1,
+  let seatsData = [];
+  for(let i = 0;i<60;i++){
+    seatsData[i] = {
+      seatNo: i + 1,
       booked : false,
       paid: false
     }
-    ,{
-      seatNo: 2,
-      booked : false,
-      paid: false
-    }
-    ,{
-      seatNo: 3,
-      booked : false,
-      paid: false
-    }
-    ,{
-      seatNo: 4,
-      booked : false,
-      paid: false
-    }
-    ,{
-      seatNo: 5,
-      booked : false,
-      paid: false
-    }
-    ,{
-      seatNo: 6,
-      booked : false,
-      paid: false
-    }
-    ,{
-      seatNo: 7,
-      booked : false,
-      paid: false
-    }
-    ,{
-      seatNo: 8,
-      booked : false,
-      paid: false
-    }
-    ,{
-      seatNo: 9,
-      booked : false,
-      paid: false
-    }
-    ,{
-      seatNo: 10,
-      booked : false,
-      paid: false
-    }
-  ]) 
+  }
+  console.log(seatsData);  
+  const [seats, setSeats] = useState(seatsData) 
   const handleClick = (e) => {
     console.log(e.target.dataset.seatNo);
     console.log(e.target.dataset.seatBooked);

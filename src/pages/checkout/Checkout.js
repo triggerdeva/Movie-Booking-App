@@ -46,9 +46,11 @@ const Checkout = () => {
   return (
     <div className="checkout-container" style={{background: `url(${movieImg})`}}>
       <div className="priceDispaly">
-        <p>per Tickets 250 * {ticketsIDs.length} : {ticketsIDs.length * 250}$</p>
-        <p>Extras : 0$</p>
-        <p>Seates no: {ticketsIDs.join(', ')}</p>
+        <p>Tickets price per head : 250 ₹ </p>
+        <p>No. of tickets : {ticketsIDs.length}</p>
+        <p>Extras fees : 0  ₹ </p>
+        <p>Final Total : {ticketsIDs.length * 250}  ₹ </p>
+        <p>Seates no. booked: {ticketsIDs.join(', ')}</p>
       </div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">You complete Name</label>
@@ -64,13 +66,15 @@ const Checkout = () => {
       {
         showModal ? (
           <div id="modal">
-        <p>Thank You {formData.name}</p>
-        <p>Amount of rs. {ticketsIDs.length * 250} have been debeted from your upi</p>
-        <p>{formData.upi}</p>
-        <p>You have successfully booked Seat no. {ticketsIDs.join(', ')}</p>
-        <p>Hope you have a Nice day</p>
-        <a className="movie__imdbButton movie__Button" href="/" >ok</a>
-      </div>
+            <div className="modal-card">
+              <p>Thank You {formData.name}</p>
+              <p>Amount of rs. {ticketsIDs.length * 250} have been debeted from your upi</p>
+              <p>{formData.upi}</p>
+              <p>You have successfully booked Seat no. {ticketsIDs.join(', ')}</p>
+              <p>Hope you have a Nice day</p>
+              <a className="movie__imdbButton movie__Button" href="/" >ok</a>
+            </div>
+        </div>
         ) : ("")
       }
       

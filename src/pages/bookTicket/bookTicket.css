@@ -36,12 +36,13 @@
     /* background-color: red; */
     position: absolute;
     top: 200px;
-    width: 100%;
+    width: 90%;
     height: max-content;
     display: flex;
     justify-content: center;
     gap: 20px;
-    max-width: 500px;
+    padding: 0px 20px;
+    /* max-width: 500px; */
     flex-wrap: wrap;
     margin: 0px auto;
     left: 0;
