@@ -1,8 +1,31 @@
-import React from "react"
+import React, {useEffect} from "react"
 import "./Header.css"
 import { Link } from "react-router-dom"
-
+import useLoginContext from "../../hooks/useLoginContext"
+import { signInWithGoogle, signOutUser, handleAuth } from "../../firebase"
 const Header = () => {
+    const {user,setUser} = useLoginContext(); 
+    const handleLogin = async () => {
+        const user = await signInWithGoogle()
+        if(user){
+            setUser(user);
+        }
+    }
+    const handleLogout = async () => {
+        const isLoggedOut = await signOutUser()
+        if(isLoggedOut){
+            setUser(null);
+        }
+    }
+    useEffect(() => {
+        handleAuth((user) => {
+            if(user){
+                setUser(user);
+            }else{
+                setUser(null);
+            }
+        })
+    },[])
     return (
         <div className="header">
             <div className="headerLeft">
@@ -10,6 +33,12 @@ const Header = () => {
                 <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
                 <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
                 <Link to="/movies/upcoming" style={{textDecoration: "none"}}><span>Upcoming</span></Link>
+                {
+                    user ? 
+                    (<button className="logout_button" onClick={handleLogout}>logout</button>)
+                        : 
+                    (<button className="login_button" onClick={handleLogin}><img src="/google.png" /><p>login with google</p></button>)
+                }
             </div>
         </div>
     )

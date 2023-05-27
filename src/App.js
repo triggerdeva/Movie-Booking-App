@@ -6,21 +6,24 @@ import MovieList from './components/movieList/movieList';
 import Movie from './pages/movieDetail/movie';
 import BookTicket from "./pages/bookTicket/BookTicket";
 import Checkout from "./pages/checkout/Checkout"
-
+import Context from "./Context";
+import ProtectedRoute from "./components/ProtectedRoute"
 function App() {
   return (
     <div className="App">
-        <Router>
-          <Header />
-            <Routes>
-                <Route index element={<Home />}></Route>
-                <Route path="movie/:id" element={<Movie />}></Route>
-                <Route path="movies/:type" element={<MovieList />}></Route>
-                <Route path="movie/bookticket/:id" element={<BookTicket />}></Route>
-                <Route path="movie/bookticket/checkout/:id" element={<Checkout />}></Route>
-                <Route path="/*" element={<h1>Error Page</h1>}></Route>
-            </Routes>
-        </Router>
+        <Context>
+          <Router>
+            <Header />
+              <Routes>
+                  <Route index element={<Home />}></Route>
+                  <Route path="movie/:id" element={<Movie />}></Route>
+                  <Route path="movies/:type" element={<MovieList />}></Route>
+                  <Route path="movie/bookticket/:id" element={< ProtectedRoute Comp={BookTicket} />}></Route>
+                  <Route path="movie/bookticket/checkout/:id" element={<Checkout />}></Route>
+                  <Route path="/*" element={<h1>Error Page</h1>}></Route>
+              </Routes>
+          </Router>
+        </Context>
     </div>
   );
 }
