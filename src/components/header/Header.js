@@ -20,6 +20,7 @@ const Header = () => {
     useEffect(() => {
         handleAuth((user) => {
             if(user){
+                console.log(user);
                 setUser(user);
             }else{
                 setUser(null);
@@ -35,7 +36,7 @@ const Header = () => {
                 <Link to="/movies/upcoming" style={{textDecoration: "none"}}><span>Upcoming</span></Link>
                 {
                     user ? 
-                    (<button className="logout_button" onClick={handleLogout}>logout</button>)
+                    (<button className="logout_button" onClick={handleLogout}><img src={user.photoURL}/><p>logout</p></button>)
                         : 
                     (<button className="login_button" onClick={handleLogin}><img src="/google.png" /><p>login with google</p></button>)
                 }

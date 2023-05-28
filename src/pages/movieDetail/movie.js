@@ -2,11 +2,18 @@ import "./movie.css"
 import React, {useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
-
+import useLoginContext from "../../hooks/useLoginContext";
+import { signInWithGoogle } from "../../firebase";
 const Movie = () => {
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
-
+    const {user,setUser} = useLoginContext();
+    const handleLogin = async () => {
+        const user = await signInWithGoogle()
+        if(user){
+            setUser(user);
+        }
+    }
     useEffect(() => {
         getData()
         window.scrollTo(0,0)
@@ -67,12 +74,15 @@ const Movie = () => {
                     currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
                 {
-                    currentMovieDetail && currentMovieDetail.imdb_id && 
-                    <Link state={{imgSrc:`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`, name : `${currentMovieDetail ? currentMovieDetail.original_title : "Hello"}`}} to={`/movie/bookticket/${id}`} style={{textDecoration:"none", color:"white"}}>
-                        <p>
-                            <span className="movie__imdbButton movie__Button" style={{backgroundColor : "green"}}>Book ticket</span>
-                        </p>
-                    </Link>
+                    user ? (
+                        currentMovieDetail && currentMovieDetail.imdb_id && 
+                        <Link state={{imgSrc:`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`, name : `${currentMovieDetail ? currentMovieDetail.original_title : "Hello"}`}} to={`/movie/bookticket/${id}`} style={{textDecoration:"none", color:"white"}}>
+                            <p>
+                                <span className="movie__imdbButton movie__Button" style={{backgroundColor : "green"}}>Book ticket</span>
+                            </p>
+                        </Link>) : (
+                            <button className="login_button" onClick={handleLogin}><p>login to book tickets</p></button>
+                        )
                 }
             </div>
             <div className="movie__heading">Production companies</div>

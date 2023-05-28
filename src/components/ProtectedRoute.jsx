@@ -6,7 +6,7 @@ const ProtectedRoute = ({Comp}) => {
   if(user){
       return (<Comp/>)
   }else{
-    return (<Navigate to="/" replace={true} />)
+    return (<Navigate state={{toast : "login before booking ticket"}} to="/" replace={true} />)
   }
 }
 

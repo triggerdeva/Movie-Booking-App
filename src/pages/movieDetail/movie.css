@@ -92,10 +92,24 @@
     display: flex;
     justify-content: space-between;
     width: 75%;
+    gap: 30px;
+    align-items: center;
+}
+.movie__links a{
+    /* flex: 0 0 100px; */
+}
+.movie__links button{
+    flex: 0 0 200px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 0px;
 }
 
 .movie__heading {
     font-size: 2.2rem;
+    flex: 0 0 100px
 }
 
 .movie__Button {
@@ -112,11 +126,12 @@
 
 .movie__homeButton {
     background-color:rgb(255, 0, 0);
-    
+    /* flex: 0 0 max-content; */
 }
 
 .movie__imdbButton {
     background-color:#f3ce13;
+    /* flex: 0 0 max-content; */
 }
 
 .newTab {

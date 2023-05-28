@@ -1,12 +1,46 @@
 import React, { useEffect, useState } from "react"
 import "./home.css"
+import {useLocation} from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from "react-router-dom";
 import MovieList from "../../components/movieList/movieList";
+// import toast, { Toaster } from 'react-hot-toast';
+// const notify = (message) => toast.error(message);
+// notify(toast)
+
+
+/* 
+
+ <Toaster
+  position="top-center"
+  reverseOrder={false}
+  gutter={8}
+  containerClassName=""
+  containerStyle={{}}
+  toastOptions={{
+    // Define default options
+    className: '',
+    duration: 5000,
+    style: {
+      background: '#363636',
+      color: '#fff',
+    },
+
+    // Default options for specific types
+    success: {
+      duration: 3000,
+      theme: {
+        primary: 'green',
+        secondary: 'black',
+      },
+    },
+  }}
+/>
+
+*/
 
 const Home = () => {
-
     const [ popularMovies, setPopularMovies ] = useState([])
 
     useEffect(() => {

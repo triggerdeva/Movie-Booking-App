@@ -18,7 +18,7 @@ function App() {
                   <Route index element={<Home />}></Route>
                   <Route path="movie/:id" element={<Movie />}></Route>
                   <Route path="movies/:type" element={<MovieList />}></Route>
-                  <Route path="movie/bookticket/:id" element={< ProtectedRoute Comp={BookTicket} />}></Route>
+                  <Route path="movie/bookticket/:id" element={< BookTicket />}></Route>
                   <Route path="movie/bookticket/checkout/:id" element={<Checkout />}></Route>
                   <Route path="/*" element={<h1>Error Page</h1>}></Route>
               </Routes>
