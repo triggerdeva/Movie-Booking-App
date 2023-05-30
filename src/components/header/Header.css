@@ -75,3 +75,46 @@ a > span:hover {
 
 }
 
+.hamburger_menu{
+    display:none;
+    cursor:pointer
+}
+.close_menu{
+    display: none;
+}
+@media screen and (max-width: 845px){
+    .hamburger_menu{
+        display:block;
+    }
+    .headerLeft{
+        position: fixed;
+        inset: 0;
+        background-color: black;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 10;
+        justify-content: center;
+        display:none;
+    }
+    .close_menu{
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 40px;
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
+        filter: invert(1);
+        cursor: pointer;
+    }
+    .login_button{
+        margin: 0px auto;
+    }
+    .logout_button{
+        margin: 0px auto;
+    }
+}
+.show{
+    display:flex
+}
+
