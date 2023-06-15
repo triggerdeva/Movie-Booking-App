@@ -53,13 +53,13 @@ const Checkout = () => {
         <p>Seates no. booked: {ticketsIDs.join(', ')}</p>
       </div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">You complete Name</label>
+        <label htmlFor="name"> Name</label>
         <input value={formData.name} onChange={handleChange} required type="text" id="name" name="name"/>
-        <label htmlFor="email">You Email</label>
+        <label htmlFor="email"> Email</label>
         <input value={formData.email} onChange={handleChange} required type="email" id="email" name="email"/>
-        <label htmlFor="phone">You phone no.</label>
+        <label htmlFor="phone"> Contact no.</label>
         <input value={formData.phone} onChange={handleChange} required type="text" id="phone" name="phone"/>
-        <label htmlFor="upi">You UPI id</label>
+        <label htmlFor="upi"> UPI id</label>
         <input value={formData.upi} onChange={handleChange} required type="text" id="upi" name="upi"/>
         <input type="submit" id="submit" name="submit"/>
       </form>
@@ -68,7 +68,7 @@ const Checkout = () => {
           <div id="modal">
             <div className="modal-card">
               <p>Thank You {formData.name}</p>
-              <p>Amount of rs. {ticketsIDs.length * 250} have been debeted from your upi</p>
+              <p>Amount of rs. {ticketsIDs.length * 250} have been debited from your upi</p>
               <p>{formData.upi}</p>
               <p>You have successfully booked Seat no. {ticketsIDs.join(', ')}</p>
               <p>Hope you have a Nice day</p>
