@@ -46,7 +46,7 @@ const Header = () => {
                     user ? 
                     (<button className="logout_button" onClick={handleLogout}><img src={user.photoURL}/><p>logout</p></button>)
                         : 
-                    (<button className="login_button" onClick={handleLogin}><img src="/google.png" /><p>login with google</p></button>)
+                    (<button className="login_button" onClick={handleLogin}><img src="/google.png" /><p>login</p></button>)
                 }
             </div>
             <div onClick={handleShowMenu} className="hamburger_menu">
