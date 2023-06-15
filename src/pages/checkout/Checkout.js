@@ -50,7 +50,7 @@ const Checkout = () => {
         <p>No. of tickets : {ticketsIDs.length}</p>
         <p>Extras fees : 0  ₹ </p>
         <p>Final Total : {ticketsIDs.length * 250}  ₹ </p>
-        <p>Seates no. booked: {ticketsIDs.join(', ')}</p>
+        <p>seatBooked : {ticketsIDs.join(', ')}</p>
       </div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name"> Name</label>
