@@ -94,7 +94,7 @@ const Movie = () => {
                                 company.logo_path 
                                 && 
                                 <span className="productionCompanyImage">
-                                    <img className="movie__productionComapany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} />
+                                    <img style={{backgroundColor: "red"}} className="movie__productionComapany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} />
                                     <span>{company.name}</span>
                                 </span>
                             }
