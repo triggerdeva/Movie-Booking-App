@@ -47,8 +47,8 @@ a > span:hover {
     margin-left: auto;
 }
 .login_button img{
-    height: 5px;
-    width: 5px;
+    height: 15px;
+    width: 15px;
     object-fit: cover;
 }
 .login_button p{

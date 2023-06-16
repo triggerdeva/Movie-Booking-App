@@ -74,7 +74,7 @@ const Checkout = () => {
               <p>{formData.upi}</p>
               <p>You have successfully booked Seat no. {ticketsIDs.join(', ')}</p>
               <p>Hope you have a Nice day</p>
-              <a className="movie__IMdbButton movie__Button" href="/" >ok</a>
+              <a className="movie__IMdbButton movie__Button" href="/" >OK</a>
             </div>
         </div>
         ) : ("")
