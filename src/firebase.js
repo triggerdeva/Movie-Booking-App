@@ -35,10 +35,12 @@ export async function signInWithGoogle(){
 
 export async function signOutUser(){
   try{
+    // eslint-disable-next-line no-unused-vars
     const result = await signOut(auth)
     return true;
   }catch(error)  {
     return false;
+    // eslint-disable-next-line no-unreachable
     console.log("error while signing out")
   };
 }
