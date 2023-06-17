@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/alt-text */
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -42,7 +43,6 @@ const BookTicket = () => {
     }catch(error){
       console.error(error);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [seats]);
   console.log(imgSrc, name);
   return (
