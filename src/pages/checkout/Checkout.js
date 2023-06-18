@@ -97,8 +97,9 @@ const Checkout = () => {
             {showModal ? (
                 <div id="modal">
                     <div className="modal-card">
-                        <img src={movieImg} alt="movie" />
+                        {/*<img src={movieImg} alt="movie" />
                         <p>{movieTitle}</p>
+            <p>{ticketsIDs}</p>*/}
                         <p>Thank You {formData.name}</p>
                         <p>
                             Amount of rs. {ticketsIDs.length * 250} have been
