@@ -135,7 +135,7 @@ form{
 .form-search{
     display: flex;
     align-items: center;
-    background: white;
+    background: blue;
     border-radius: 6px;
     gap: 5px;
     padding: 0px 10px;
