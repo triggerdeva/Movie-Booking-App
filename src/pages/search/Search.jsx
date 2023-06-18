@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Cards from "../../components/card/card";
+import "./search.css"
 const Search = () => {
     const [movies, setMovies] = useState([]);
     const [movieList, setMovieList] = useState([]);

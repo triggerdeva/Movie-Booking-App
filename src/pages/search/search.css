@@ -1,0 +1,15 @@
+.movie__list {
+    margin-top: 20px;
+  }
+  
+  .list__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .list__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
