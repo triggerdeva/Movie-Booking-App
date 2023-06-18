@@ -10,12 +10,12 @@
     position: relative;
     background-size: cover;
     background-position: center;
-  }
-  label{
+}
+label {
     display: block;
-  }
-  
-  form{
+}
+
+form {
     align-self: flex-start;
     background-color: rgba(0, 0, 0, 0.454);
     border-radius: 10px;
@@ -26,16 +26,15 @@
     flex-direction: column;
     gap: 5px;
     margin-top: 40px;
-  }
-  
-  input[type="email"],
-  input[type="text"],
-  input[type="submit"]{
+}
+
+input[type="email"],
+input[type="text"],
+input[type="submit"] {
     margin: 10px 0px;
     padding: 10px;
-    
-  }
-  .priceDisplay{
+}
+.priceDisplay {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -45,10 +44,9 @@
     padding: 30px;
     align-self: flex-start;
     margin-top: 40px;
-  }
+}
 
-
-  #modal{
+#modal {
     position: absolute;
     inset: 0;
     margin: auto auto;
@@ -58,20 +56,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .modal-card{
+}
+.modal-card {
     background-color: rgb(255, 255, 6);
     padding: 20px;
     align-items: center;
     border-radius: 90px auto;
     width: 80%;
     height: 100%;
-    color :black;
-  }
+    color: black;
+}
+.modal-card img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
 
-  #modal a {
+#modal a {
     margin: 20px auto;
-  }
-
-
-  
+}
