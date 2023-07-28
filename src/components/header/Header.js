@@ -77,6 +77,13 @@ const Header = () => {
                 >
                     <span>Upcoming</span>
                 </Link>
+
+                <Link 
+                onClick={closeMenu}
+                to="/watchlist" 
+                style={{ textDecoration: 'none' }}>
+                <span>Watchlist</span>
+              </Link>
                 <form onSubmit={handleSearch}>
                     <input
                         value={query}
