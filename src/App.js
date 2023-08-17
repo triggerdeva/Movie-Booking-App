@@ -9,6 +9,7 @@ import Checkout from "./pages/checkout/Checkout";
 import Context from "./Context";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Search from "./pages/search/Search";
+import WatchlistPage from "./components/WatchlistPage"
 function App() {
     return (
         <div className="App">
@@ -33,6 +34,10 @@ function App() {
                         <Route
                             path="search/:query"
                             element={<Search />}
+                        ></Route>
+                        <Route
+                            path="watchlist"
+                            element={<WatchlistPage />}
                         ></Route>
                         <Route path="/*" element={<h1>Error Page</h1>}></Route>
                     </Routes>

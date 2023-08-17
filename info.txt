@@ -1,0 +1,7 @@
+wishlist feature:
+    => add to wishlist 
+        when the application starts
+        check if user exists in wishlist if exist in wishlist get his wishlist data if not then create his wishlist entry.
+        when the card is opened just check if the current movie is wishlisted movie or not depending upon what it is show that component.
+    => delete from wishlist
+        delete the entry from db when the user clicks on it.
